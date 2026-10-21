@@ -6,7 +6,7 @@ CONFIG_DIR  = Path(__file__).resolve().parent          # …/SpSe/config
 PROJECT_DIR = CONFIG_DIR.parent                        # …/SpSe
 
 INPUT_DATA  = PROJECT_DIR / "data" / "sales_data.csv"  # …/SpSe/data/sales_data.csv
-OUTPUT_DATA = PROJECT_DIR / "output"                   # …/SpSe/output
+OUTPUT_DATA_FINANCE = PROJECT_DIR /"output" /"output_finance"
 
 EXPECTED_COLUMNS = [
     "Order_ID",
