@@ -1,8 +1,8 @@
 Region,Category,Subcategory,Total Sales,Total Profit,Total return,Return rate
 Central,Technology,Phones,889875.950,283590.650,7,0.0378
 Central,Home & Kitchen,Cleaning,437030.360,167784.630,4,0.0404
-East,Office Supplies,Pens,667965.230,283111.440,8,0.0611
 North,Furniture,Tables,793553.080,289430.130,9,0.0621
+East,Office Supplies,Pens,667965.230,283111.440,8,0.0611
 East,Technology,Laptops,877833.450,275163.290,12,0.0732
 East,Beauty,Haircare,337751.180,156563.320,4,0.0667
 Central,Furniture,Storage,487486.070,173716.420,10,0.0917
@@ -19,8 +19,8 @@ West,Beauty,Skincare,511569.500,242985.380,7,0.0686
 East,Technology,Monitors,769345.920,244094.990,7,0.0486
 North,Furniture,Chairs,689132.730,245653.490,17,0.1097
 East,Office Supplies,Printers,564087.110,230768.500,9,0.0709
-Central,Furniture,Desks,625494.150,224975.020,9,0.0687
 Central,Office Supplies,Binders,693373.310,293298.410,9,0.0647
+Central,Furniture,Desks,625494.150,224975.020,9,0.0687
 West,Furniture,Chairs,806025.370,296993.860,9,0.0556
 North,Technology,Laptops,1196245.130,370995.120,21,0.0830
 West,Technology,Accessories,1069649.080,326645.730,23,0.1000
@@ -32,20 +32,20 @@ South,Furniture,Desks,692283.920,244257.310,18,0.1091
 North,Beauty,Makeup,493711.180,227909.700,9,0.0891
 West,Furniture,Desks,735501.320,267878.260,4,0.0252
 South,Furniture,Chairs,786326.900,285180.000,14,0.0838
-North,Beauty,Skincare,495066.770,232263.370,12,0.1043
 North,Beauty,Personal Care,554589.820,254427.130,8,0.0714
+North,Beauty,Skincare,495066.770,232263.370,12,0.1043
 North,Office Supplies,Binders,1047450.410,442554.590,12,0.0628
-South,Home & Kitchen,Cookware,726948.490,277602.850,15,0.0980
 West,Beauty,Makeup,474673.310,221516.230,9,0.0849
+South,Home & Kitchen,Cookware,726948.490,277602.850,15,0.0980
 South,Home & Kitchen,Appliances,763089.130,293388.150,14,0.0881
 East,Furniture,Tables,638214.290,224919.940,7,0.0667
 East,Furniture,Chairs,606840.430,220682.870,6,0.0504
 Central,Home & Kitchen,Decor,550325.050,208583.430,11,0.1100
 North,Technology,Monitors,1063293.420,333347.860,11,0.0489
 North,Office Supplies,Pens,856436.390,357447.050,11,0.0618
+West,Home & Kitchen,Cleaning,688245.850,258310.470,15,0.1064
 South,Beauty,Skincare,474636.220,223968.670,5,0.0442
 North,Technology,Accessories,1077617.160,333479.150,17,0.0711
-West,Home & Kitchen,Cleaning,688245.850,258310.470,15,0.1064
 West,Office Supplies,Binders,944847.670,395457.230,13,0.0688
 South,Office Supplies,Binders,1078171.310,452343.190,21,0.1010
 South,Technology,Laptops,1209789.990,375989.440,22,0.0833
@@ -53,48 +53,48 @@ North,Office Supplies,Paper,930798.390,392673.390,11,0.0636
 South,Furniture,Storage,730408.390,271492.140,9,0.0570
 East,Beauty,Personal Care,329632.310,156892.320,4,0.0471
 South,Home & Kitchen,Decor,742036.510,280922.460,16,0.1046
-South,Beauty,Personal Care,539219.300,256466.040,10,0.0730
 North,Home & Kitchen,Appliances,749255.130,289392.720,7,0.0490
+South,Beauty,Personal Care,539219.300,256466.040,10,0.0730
 East,Beauty,Makeup,312630.760,146936.290,6,0.0800
 East,Furniture,Desks,524112.600,187393.650,9,0.0738
 Central,Technology,Monitors,750781.080,236028.070,11,0.0636
 Central,Technology,Accessories,921341.440,291831.020,15,0.0820
 South,Beauty,Makeup,538800.410,252282.910,8,0.0741
 North,Home & Kitchen,Cookware,676847.190,256943.260,8,0.0530
-West,Office Supplies,Pens,879749.830,368797.860,11,0.0576
 East,Office Supplies,Paper,732558.480,307748.050,15,0.0987
-South,Beauty,Haircare,517933.270,236248.520,13,0.1238
+West,Office Supplies,Pens,879749.830,368797.860,11,0.0576
 West,Beauty,Personal Care,516237.600,245194.400,8,0.0762
+South,Beauty,Haircare,517933.270,236248.520,13,0.1238
 Central,Home & Kitchen,Cookware,511305.250,199294.140,9,0.0849
 East,Furniture,Storage,661541.030,239118.710,7,0.0530
-East,Home & Kitchen,Cleaning,470962.600,177189.790,11,0.0991
 North,Home & Kitchen,Decor,591665.680,222949.470,8,0.0645
+East,Home & Kitchen,Cleaning,470962.600,177189.790,11,0.0991
 West,Beauty,Haircare,416567.400,192829.000,9,0.1047
 East,Beauty,Skincare,332805.370,155684.110,5,0.0602
 Central,Beauty,Personal Care,454648.210,215827.610,5,0.0568
 Central,Furniture,Chairs,483909.190,167870.380,9,0.0818
 Central,Furniture,Tables,693057.580,253340.270,6,0.0480
 East,Home & Kitchen,Cookware,516775.590,200103.060,4,0.0374
-Central,Home & Kitchen,Appliances,499505.000,191163.030,6,0.0545
 South,Technology,Monitors,1291313.770,392717.560,22,0.0880
+Central,Home & Kitchen,Appliances,499505.000,191163.030,6,0.0545
 West,Furniture,Storage,759384.180,275370.140,18,0.1118
 South,Office Supplies,Pens,1055428.750,432792.410,13,0.0718
 South,Technology,Accessories,1336148.200,419546.310,12,0.0492
 South,Office Supplies,Printers,933387.980,391770.470,12,0.0606
 Central,Beauty,Haircare,467825.140,220734.480,8,0.0964
 South,Home & Kitchen,Cleaning,694994.530,266779.980,15,0.0904
-South,Office Supplies,Paper,1028080.550,432177.520,10,0.0481
 South,Technology,Phones,1240836.840,383715.630,22,0.0866
+South,Office Supplies,Paper,1028080.550,432177.520,10,0.0481
 East,Office Supplies,Binders,720419.680,303328.430,6,0.0382
 West,Furniture,Tables,831726.290,297155.380,13,0.0760
 North,Technology,Phones,1058669.980,334209.510,17,0.0742
 West,Home & Kitchen,Appliances,726852.110,281213.920,14,0.0886
 North,Beauty,Haircare,541406.330,256873.180,4,0.0412
-South,Furniture,Tables,801674.710,291512.100,8,0.0471
 Central,Technology,Laptops,980717.550,309206.500,16,0.0788
 West,Office Supplies,Printers,852728.970,362271.830,12,0.0690
-Central,Office Supplies,Pens,650022.570,276510.110,8,0.0563
+South,Furniture,Tables,801674.710,291512.100,8,0.0471
 East,Technology,Accessories,828096.640,251202.250,17,0.0939
+Central,Office Supplies,Pens,650022.570,276510.110,8,0.0563
 West,Technology,Monitors,1096538.730,343458.440,14,0.0617
 West,Technology,Phones,1143532.140,350381.820,20,0.0877
 East,Home & Kitchen,Decor,523934.730,202527.270,7,0.0636

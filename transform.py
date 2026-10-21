@@ -22,7 +22,7 @@ def transform (df):
     
     df_1=df_1.join(df_2, how='left' ,on = 'city' )   
     
-    return df_2 
+    return df_1 
 
 
 #["Order_ID", "Order_Date", "Customer_ID", "Region", "City", 
@@ -39,7 +39,7 @@ def transform_by_region_product (df):
     
      df_g = df.groupby("Region","Category",
                       "Subcategory").agg(
-                          F.count(F.col("Order_ID")).alias("total Orders"),
+                          F.countDistinct(F.col("Order_ID")).alias("total Orders"),
                           F.round(F.sum(
                           F.col("Net_Sales_INR")),3).alias("Total Sales"), 
                           F.round(F.sum(
