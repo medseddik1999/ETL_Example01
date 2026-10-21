@@ -6,7 +6,7 @@ Created on Tue Oct 20 11:52:04 2026
 @author: hakim
 """
 import pyspark.sql.functions as F 
-
+import pyspark.sql.types as T
 
 
 def transform (df): 
@@ -22,6 +22,40 @@ def transform (df):
     
     df_1=df_1.join(df_2, how='left' ,on = 'city' )   
     
-    return df_2 
+    return df_1 
 
 
+#["Order_ID", "Order_Date", "Customer_ID", "Region", "City", 
+#"Segment", "Channel", "Category", "Subcategory"]
+#["Product_ID", "Quantity", "Unit_Price_INR", "Discount",
+# "Sales_INR", "Discount_Amount_INR", "Net_Sales_INR"]
+#["Cost_INR", "Profit_INR", "Shipping_Days", "Returned", 
+#"Customer_Satisfaction", "Payment_Method"]
+
+
+def transform_by_region_product (df): 
+    
+     df=df.withColumn("Returned",F.when(F.col("Returned") == "Yes" ,1).otherwise(0)) 
+    
+     df_g = df.groupby("Region","Category",
+                      "Subcategory").agg(
+                          F.countDistinct(F.col("Order_ID")).alias("total Orders"),
+                          F.round(F.sum(
+                          F.col("Net_Sales_INR")),3).alias("Total Sales"), 
+                          F.round(F.sum(
+                          F.col("Profit_INR")),3).alias("Total Profit") , 
+                          F.sum(F.col("Returned")).alias('Total return'))
+   
+     df_g=df_g.withColumn("Return rate" , F.round(F.col('Total return')/F.col("total Orders"),4))   
+     df_g = df_g.select(
+          F.col("Region").cast(T.StringType()),
+          F.col("Category").cast(T.StringType()),
+          F.col("Subcategory").cast(T.StringType()),
+          F.col("Total Sales").cast(T.DecimalType(18, 3)),
+          F.col("Total Profit").cast(T.DecimalType(18, 3)),
+          F.col("Total return").cast(T.IntegerType()),
+          F.col("Return rate").cast(T.DecimalType(18, 4))
+)     
+     return df_g          
+                          
+    

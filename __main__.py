@@ -8,10 +8,11 @@ import shutil
 import sys
 
 from pyspark.sql import SparkSession
+
 from extract import read_data
 from clean import clean_data
-from transform import transform
-from configration.conf import INPUT_DATA, OUTPUT_DATA_FINANCE
+from transform import transform , transform_by_region_product
+from configration.conf import INPUT_DATA, OUTPUT_DATA_CITIES , OUTPUT_DATA_RP , OUTPUT_DATA_FINANCE
 from monthly_kpi import calculate_monthly_kpi
 
 log = logging.getLogger(__name__)
@@ -53,22 +54,22 @@ def main() -> int:
         log.info("ETL process is starting")
         df = read_data(INPUT_DATA, spk=spark)
         log.info("extraction is done")
-        print("--raw data")
-        #df.show(20, truncate=False)
 
         df = clean_data(df, na_policy="avg_")
-        print("--cleaned data")
-        #df.show(20, truncate=False)
-        #df.printSchema()
+        df_city = transform(df)  
+        df_rp= transform_by_region_product(df)
+        log.info("data is cleaned and transformed")
 
+        final_path = write_single_csv(df_city, OUTPUT_DATA_CITIES, filename="sales_per_city.csv") 
+        log.info("data written to %s", final_path) 
+        final_path2 = write_single_csv(df_rp, OUTPUT_DATA_RP, filename="sales_per_region_product.csv") 
+        log.info("data written to %s", final_path2)
+        
         print("--Monthly financial KPI")
         monthly_df = calculate_monthly_kpi(df)
-        monthly_df.show(20, truncate=False)
+        monthly_df.show(20, truncate=False) #affichage sur la console
         final_path3 = write_single_csv(monthly_df, OUTPUT_DATA_FINANCE, filename="monthly_financial_kpi.csv")
         log.info("Fichier généré : %s", final_path3)
-
-        #df = transform(df)
-        #log.info("data is cleaned and transformed")
 
     except Exception:
         log.exception("ETL failed")
