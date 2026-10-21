@@ -9,7 +9,7 @@ PROJECT_DIR = CONFIG_DIR.parent                        # …/SpSe
 INPUT_DATA  = PROJECT_DIR / "data" / "sales_data.csv"  # …/SpSe/data/sales_data.csv
 OUTPUT_DATA_CITIES = PROJECT_DIR / "output" /"output_cities"     # …/SpSe/output
 OUTPUT_DATA_RP = PROJECT_DIR /"output" /"output_region_products" 
-
+OUTPUT_DATA_FINANCE = PROJECT_DIR /"output" /"output_finance"
 
 
 EXPECTED_COLUMNS = [

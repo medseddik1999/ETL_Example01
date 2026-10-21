@@ -12,8 +12,8 @@ from pyspark.sql import SparkSession
 from extract import read_data
 from clean import clean_data
 from transform import transform , transform_by_region_product
-from configration.conf import INPUT_DATA, OUTPUT_DATA_CITIES , OUTPUT_DATA_RP
-
+from configration.conf import INPUT_DATA, OUTPUT_DATA_CITIES , OUTPUT_DATA_RP , OUTPUT_DATA_FINANCE
+from monthly_kpi import calculate_monthly_kpi
 
 log = logging.getLogger(__name__)
 
@@ -64,6 +64,12 @@ def main() -> int:
         log.info("data written to %s", final_path) 
         final_path2 = write_single_csv(df_rp, OUTPUT_DATA_RP, filename="sales_per_region_product.csv") 
         log.info("data written to %s", final_path2)
+        
+        print("--Monthly financial KPI")
+        monthly_df = calculate_monthly_kpi(df)
+        monthly_df.show(20, truncate=False) #affichage sur la console
+        final_path3 = write_single_csv(monthly_df, OUTPUT_DATA_FINANCE, filename="monthly_financial_kpi.csv")
+        log.info("Fichier généré : %s", final_path3)
 
     except Exception:
         log.exception("ETL failed")
@@ -76,8 +82,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main()) 
-    
-    
-    
-  
-    
