@@ -1,0 +1,53 @@
+# Schéma du projet
+
+- .ipynb_checkpoints/
+  - __init__-checkpoint.py
+  - Sales_spark-checkpoint.ipynb
+- .spyproject/
+  - config/
+    - backups/
+      - codestyle.ini.bak
+      - encoding.ini.bak
+      - vcs.ini.bak
+      - workspace.ini.bak
+    - defaults/
+      - defaults-codestyle-0.2.0.ini
+      - defaults-encoding-0.2.0.ini
+      - defaults-vcs-0.2.0.ini
+      - defaults-workspace-0.2.0.ini
+    - codestyle.ini
+    - encoding.ini
+    - vcs.ini
+    - workspace.ini
+- configration/
+  - .ipynb_checkpoints/
+    - conf-checkpoint.py
+  - __init__.py
+  - conf.py
+- data/
+  - .ipynb_checkpoints/
+    - sales_data-checkpoint.csv
+  - sales_data.csv
+  - trypy.py
+- output/
+  - output_cities/
+    - ._SUCCESS.crc
+    - .part-00000-ef58572d-8f07-4eee-8b4a-c54e7d980464-c000.csv.crc
+    - sales_per_city.csv
+  - output_region_products/
+    - ._SUCCESS.crc
+    - .part-00000-329ad36f-7897-4ed0-b76d-09b4d03feeea-c000.csv.crc
+    - sales_per_region_product.csv
+- test/
+  - test_output.py
+  - test_output_region_product.py
+- .gitignore
+- __init__.py
+- __main__.py
+- clean.py
+- extract.py
+- pyproject.toml
+- readme.md
+- repo_schema_gen.py
+- Sales_spark.ipynb
+- transform.py
