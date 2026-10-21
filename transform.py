@@ -53,8 +53,8 @@ def transform_by_region_product (df):
           F.col("Subcategory").cast(T.StringType()),
           F.col("Total Sales").cast(T.DecimalType(18, 3)),
           F.col("Total Profit").cast(T.DecimalType(18, 3)),
-          F.col("Total return").cast(T.LongType()),
-          F.col("Return rate").cast(T.IntegerType()),
+          F.col("Total return").cast(T.IntegerType()),
+          F.col("Return rate").cast(T.DecimalType(18, 4))
 )     
      return df_g          
                           

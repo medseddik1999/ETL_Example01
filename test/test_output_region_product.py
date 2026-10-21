@@ -59,4 +59,4 @@ def test_total_return_is_long(fields):
 
 
 def test_return_rate_is_double(fields):
-    assert isinstance(fields["Return rate"].dataType, DoubleType)
+    assert isinstance(fields["Return rate"].dataType, (DoubleType ,DecimalType))

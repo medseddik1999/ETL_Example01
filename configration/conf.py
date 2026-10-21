@@ -1,7 +1,6 @@
 # config/configuration.py
 from pathlib import Path
 
-from src import transform
 
 # config/configuration.py  →  parent = config/  →  parent = SpSe/
 CONFIG_DIR  = Path(__file__).resolve().parent          # …/SpSe/config
