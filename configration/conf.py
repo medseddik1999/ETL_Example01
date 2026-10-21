@@ -1,12 +1,16 @@
 # config/configuration.py
 from pathlib import Path
 
+
 # config/configuration.py  →  parent = config/  →  parent = SpSe/
 CONFIG_DIR  = Path(__file__).resolve().parent          # …/SpSe/config
 PROJECT_DIR = CONFIG_DIR.parent                        # …/SpSe
 
 INPUT_DATA  = PROJECT_DIR / "data" / "sales_data.csv"  # …/SpSe/data/sales_data.csv
-OUTPUT_DATA = PROJECT_DIR / "output"                   # …/SpSe/output
+OUTPUT_DATA_CITIES = PROJECT_DIR / "output" /"output_cities"     # …/SpSe/output
+OUTPUT_DATA_RP = PROJECT_DIR /"output" /"output_region_products" 
+
+
 
 EXPECTED_COLUMNS = [
     "Order_ID",

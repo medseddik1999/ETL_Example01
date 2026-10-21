@@ -11,8 +11,8 @@ from pyspark.sql import SparkSession
 
 from extract import read_data
 from clean import clean_data
-from transform import transform
-from configration.conf import INPUT_DATA, OUTPUT_DATA
+from transform import transform , transform_by_region_product
+from configration.conf import INPUT_DATA, OUTPUT_DATA_CITIES , OUTPUT_DATA_RP
 
 
 log = logging.getLogger(__name__)
@@ -56,11 +56,14 @@ def main() -> int:
         log.info("extraction is done")
 
         df = clean_data(df, na_policy="avg_")
-        df = transform(df)
+        df_city = transform(df)  
+        df_rp= transform_by_region_product(df)
         log.info("data is cleaned and transformed")
 
-        final_path = write_single_csv(df, OUTPUT_DATA, filename="sales_per_city.csv")
-        log.info("data written to %s", final_path)
+        final_path = write_single_csv(df_city, OUTPUT_DATA_CITIES, filename="sales_per_city.csv") 
+        log.info("data written to %s", final_path) 
+        final_path2 = write_single_csv(df_rp, OUTPUT_DATA_RP, filename="sales_per_region_product.csv") 
+        log.info("data written to %s", final_path2)
 
     except Exception:
         log.exception("ETL failed")
